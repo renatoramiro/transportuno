@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transportuno</title>
+  <%= stylesheet_link_tag 'styles' %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<div id="content">
+<div id="back">
+<!-- header begins -->
+<div id="header">
+	<div id="menu">
+    	<ul>
+        	<li><%= link_to 'Início', home_index_path %></li>
+        	<li><%= link_to 'Contato', contact_index_path %></li>            
+        </ul>
+    </div>
+	<div id="logo">
+		<h1><a href="#">TransportUno</a></h1>
+	</div>	
+</div>
+<!-- header ends -->
+<!-- content begins -->
+ <div id="main">
+	<div id="right">
+    <%= yield %>
+	</div>
+	<div id="left">
+			<h3>Artefatos</h3>
+			<ul>
+				<li><ul>
+					<li><a href="docs/DocumentodeVisao.doc">Documento de Vis&atilde;o</a></li>
+				</ul>
+			  </li>
+			</ul>
+			<br />		
+	</div>
+	</div>
+
+<div id="footer">
+<p>Copyright &copy; <%= Time.now.year %>. Todos os direitos reservados<br /> Luma e Pamella</p>
+	</div>
+</div>
+</div>
+<!-- footer ends-->
+
+</body>
+</html>
